@@ -1,23 +1,33 @@
 #include"iostream"
-#include"string"
-#include"vector"
 #include"algorithm"
+#include"string"
 using namespace std;
+
+int LengthOfRevese(int begin,int end,string str) {
+  int b = begin;
+  int e = end;
+  int length = 0;
+  while(b < e){
+    if(str[b] != str[e]) return 1;
+    b++;
+    e--;
+    length += 2;
+  }
+  if(length != 1 && b == e) length += 1;//加上中间的数的长度1
+  return length;
+}
+
 int main(int argc, char const *argv[]) {
   string str;
-  getline(cin,str);//输入空格有效
+  int Mlen = -1;
+  getline(cin,str);
   int len = str.length();
-  vector<vector<int>> dp(len,vector<int>(len));
-  for(int i = len - 1;i >= 0;i--){
-    dp[i][i] = 1;
-    for(int j = i+1;j < len;j++){
-      if(str[i] == str[j]) {
-        dp[i][j] = dp[i+1][j-1] + 2;//i-j为回文串，长度+2
-      }
-      else
-        dp[i][j] = max(dp[i+1][j],dp[i][j-1]);//更新dp数组的值
+  for(int i = 0; i < len;i++) {
+    for(int j = len - 1;j >= i;j--) {
+      int Len = LengthOfRevese(i,j,str);
+      Mlen = max(Len,Mlen);
     }
   }
-  cout<<dp[0][len-1];
+  cout<<Mlen<<endl;
   return 0;
 }
