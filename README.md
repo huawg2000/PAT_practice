@@ -48,4 +48,4 @@ dp[i] = max(dp[i-1]+arr[i],dp[i-1])
 2.全为非正数的情况时，要找到第一个0所在的位置并输出0.
 3.首尾数字出现0，要将0去掉
 
-[1007_Maximum_subsequence_sum.cpp](./1007 Maximum Subsequence Sum)
+[1007_Maximum_subsequence_sum.cpp](./1007_Maximum_subsequence_sum.cpp)
