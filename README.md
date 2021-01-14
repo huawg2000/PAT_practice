@@ -72,3 +72,8 @@ Is PAT&TAP symmetric?
 第一次用动态规划解决问题，后面也没解决问题
 具体哪一步出错了还不太清楚 得分19/25
 [1040_Longest_Symmetric_String.cpp](./1040_Longest_Symmetric_String.cpp)
+
+第二次直接暴力破解，过了，想想应该是dp超限？
+
+还是不太清楚，待会参考大佬思路的
+[1040_Longest_Symmetric_String.cpp](./1040_Longest_Symmetric_String.cpp)
