@@ -44,4 +44,4 @@ dp[i] = max(dp[i-1]+arr[i],dp[i-1])
 1.全为负数的情况时，输出第一个数和最后一个数
 2.全为非正数的情况时，要找到第一个0所在的位置并输出0.
 3.首尾数字出现0，要将0去掉
-[1007_Maximum_subsequence_sum.cpp](./1040_Longest_Symmetric_String.cpp)
+[1007_Maximum_subsequence_sum.cpp](./1007_Maximum_subsequence_sum.cpp)
