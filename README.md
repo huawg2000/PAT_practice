@@ -28,10 +28,13 @@ be 0, and you are supposed to output the first and the last numbers of
 the whole sequence.
 
 **Sample Input:**
+
 10
+
 -10 1 2 3 4 -5 -23 3 7 -21
 
 **Sample Output:**
+
 10 1 4
 
 最大子序列问题
@@ -44,4 +47,5 @@ dp[i] = max(dp[i-1]+arr[i],dp[i-1])
 1.全为负数的情况时，输出第一个数和最后一个数
 2.全为非正数的情况时，要找到第一个0所在的位置并输出0.
 3.首尾数字出现0，要将0去掉
-[1007_Maximum_subsequence_sum.cpp](./1007_Maximum_subsequence_sum.cpp)
+
+[1007_Maximum_subsequence_sum.cpp](./1007 Maximum Subsequence Sum)
