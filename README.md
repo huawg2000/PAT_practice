@@ -49,3 +49,26 @@ dp[i] = max(dp[i-1]+arr[i],dp[i-1])
 3.首尾数字出现0，要将0去掉
 
 [1007_Maximum_subsequence_sum.cpp](./1007_Maximum_subsequence_sum.cpp)
+
+## 1040 Longest Symmetric String
+
+Given a string, you are supposed to output the length of the longest symmetric sub-string. For example, given Is PAT&TAP symmetric?, the longest symmetric sub-string is s PAT&TAP s, hence you must output 11.
+
+Input Specification:
+Each input file contains one test case which gives a non-empty string of length no more than 1000.
+
+Output Specification:
+For each test case, simply print the maximum length in a line.
+
+**Sample Input:**
+
+Is PAT&TAP symmetric?
+
+**Sample Output:**
+
+11
+
+最长回文子串问题
+第一次用动态规划解决问题，后面也没解决问题
+具体哪一步出错了还不太清楚 得分19/25
+[1040_Longest_Symmetric_String.cpp](./1040_Longest_Symmetric_String.cpp)
