@@ -152,6 +152,7 @@ N/A
 
 
 ##1101 Quick Sort (25分)
+
 There is a classical process named partition in the famous quick sort algorithm. In this process we typically choose one element as the pivot. Then the elements less than the pivot are moved to its left and those larger than the pivot to its right. Given N distinct positive integers after a run of partition, could you tell how many elements could be the selected pivot for this partition?
 
 For example, given N=5 and the numbers 1, 3, 2, 4, and 5. We have:
