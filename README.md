@@ -194,3 +194,123 @@ For each test case, output in the first line the number of pivot candidates. The
 若true则计数++，push_back到res数组的最后面，false则继续循环
 
 [1101_Quick_Sort.cpp](./1101_Quick_Sort.cpp)
+
+## 1102 Invert a Binary Tree (25分)
+
+The following is from Max Howell @twitter:
+
+Google: 90% of our engineers use the software you wrote (Homebrew), but you can't invert a binary tree on a whiteboard so fuck off.
+Now it's your turn to prove that YOU CAN invert a binary tree!
+
+Input Specification:
+Each input file contains one test case. For each case, the first line gives a positive integer N (≤10) which is the total number of nodes in the tree -- and hence the nodes are numbered from 0 to N−1. Then N lines follow, each corresponds to a node from 0 to N−1, and gives the indices of the left and right children of the node. If the child does not exist, a - will be put at the position. Any pair of children are separated by a space.
+
+Output Specification:
+For each test case, print in the first line the level-order, and then in the second line the in-order traversal sequences of the inverted tree. There must be exactly one space between any adjacent numbers, and no extra space at the end of the line.
+
+**Sample Input:**
+
+8
+
+1 -
+
+- -
+
+0 -
+
+2 7
+
+- -
+
+- -
+
+5 -
+
+4 6
+
+**Sample Output:**
+
+3 7 2 6 4 0 5 1
+
+6 5 7 4 3 2 0 1
+
+二叉树反转，就是把一般遍历从左到右变为从右到左
+
+用bfs实现层序遍历
+
+随后递归求中序遍历
+
+[1102_Invert_a_Binary_Tree.cpp](./1102_Invert_a_Binary_Tree.cpp)
+
+
+## 1103 Integer Factorization (30分)
+The K−P factorization of a positive integer N is to write N as the sum of the P-th power of K positive integers. You are supposed to write a program to find the K−P factorization of N for any positive integers N, K and P.
+
+Input Specification:
+Each input file contains one test case which gives in a line the three positive integers N (≤400), K (≤N) and P (1<P≤7). The numbers in a line are separated by a space.
+
+Output Specification:
+For each case, if the solution exists, output in the format:
+
+N = n[1]^P + ... n[K]^P
+where n[i] (i = 1, ..., K) is the i-th factor. All the factors must be printed in non-increasing order.
+
+Note: the solution may not be unique. For example, the 5-2 factorization of 169 has 9 solutions, such as 12^2​​ + 4^2 + 2^2 + 2^2 + 1^2;or 11^2 + 6^2 + 2^2 + 2^2 +
+2^2, or more. You must output the one with the maximum sum of the factors. If there is a tie, the largest factor sequence must be chosen -- sequence {a_1
+​​,a_2,…a_k}is said to be larger than {b_1,b_2,…,b_k}if there exists 1≤L≤K such that a_i​ = b_i
+for i<L and a_L>b_L.
+
+If there is no solution, simple output Impossible.
+
+**Sample Input 1:**
+
+169 5 2
+
+**Sample Output 1:**
+
+169 = 6^2 + 6^2 + 6^2 + 6^2 + 5^2
+
+**Sample Input 2:**
+
+169 167 3
+
+**Sample Output 2:**
+
+Impossible
+
+第一次写除了图以外的dfs
+
+首先先写截止条件，当dfs遍历的数等于五个时return，若等于目标数，则比较
+序列和大小，若比之前的序列和大，则更新，否则继续进行循环至index = 1.
+
+[1103_Integer_Factorization.cpp](./1103_Integer_Factorization.cpp)
+
+## 1104 Sum of Number Segments (20分)
+
+Given a sequence of positive numbers, a segment is defined to be a consecutive subsequence. For example, given the sequence { 0.1, 0.2, 0.3, 0.4 }, we have 10 segments: (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) and (0.4).
+
+Now given a sequence, you are supposed to find the sum of all the numbers in all the segments. For the previous example, the sum of all the 10 segments is 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0.
+
+Input Specification:
+Each input file contains one test case. For each case, the first line gives a positive integer N, the size of the sequence which is no more than 10
+​5
+​​ . The next line contains N positive numbers in the sequence, each no more than 1.0, separated by a space.
+
+Output Specification:
+For each test case, print in one line the sum of all the numbers in all the segments, accurate up to 2 decimal places.
+
+**Sample Input:**
+
+4
+
+0.1 0.2 0.3 0.4
+
+**Sample Output:**
+
+5.00
+
+观察数学规律，发现每个数出现(n-i+1) * i次，累加即可
+
+坑点是数据量过大，需要用long double 类型进行结果值的存储
+
+[1104_Sum_of_Number_Segments.cpp](./1104_Sum_of_Number_Segments.cpp)
