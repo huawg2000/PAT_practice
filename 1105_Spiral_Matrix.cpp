@@ -16,18 +16,10 @@ int main(int argc, char const *argv[]) {
     cin>>a[i];
   }
 
-  for(int i = 0;i < n;i++) {
-    for(int j = 0;j < n;j++) {
-      if(i*j == n && i+j < Min) {
-        Min = i+j;
-        row = i;
-        col = j;
-      }
-      if(row < col) {
-        int t = row;
-        row = col;
-        col = t;
-      }
+  for (col =sqrt(n); col>=1; col--){
+    if (n % col == 0){
+      row = n / col;
+      break;
     }
   }
 
