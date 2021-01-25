@@ -349,3 +349,7 @@ For each test case, output the resulting matrix in m lines, each contains n numb
 内存超限，走一个螺旋矩阵居然走了一下午
 
 [1105_Spiral_Matrix.cpp](./1105_Spiral_Matrix.cpp)
+
+修改了一下行列判断的条件，成功ac
+
+[1105_Spiral_Matrix.cpp](./1105_Spiral_Matrix.cpp)
