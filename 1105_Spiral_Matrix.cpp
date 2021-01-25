@@ -16,6 +16,7 @@ int main(int argc, char const *argv[]) {
     cin>>a[i];
   }
 
+  //判断行列是否能被n整除
   for (col =sqrt(n); col>=1; col--){
     if (n % col == 0){
       row = n / col;
@@ -27,14 +28,15 @@ int main(int argc, char const *argv[]) {
   sort(a.begin(),a.end(),cmp);
   int up = 0, down = row - 1, left = 0, right = col - 1, cnt = 0;
 
+  //螺旋矩阵
   while(true) {
-         for(int j = left; j <= right; j ++) res[up][j] = a[cnt ++];
+         for(int j = left; j <= right; j ++) res[up][j] = a[cnt ++];//向右走
          if(++ up > down) break;
-         for(int i = up; i <= down; i ++) res[i][right] = a[cnt ++];
+         for(int i = up; i <= down; i ++) res[i][right] = a[cnt ++];//向下走
          if(-- right < left) break;
-         for(int j = right; j >= left; j --) res[down][j] = a[cnt ++];
+         for(int j = right; j >= left; j --) res[down][j] = a[cnt ++];//向左走
          if(-- down < up) break;
-         for(int i = down; i >= up; i --) res[i][left] = a[cnt ++];
+         for(int i = down; i >= up; i --) res[i][left] = a[cnt ++];//向上走
          if(++ left > right) break;
      }
 
