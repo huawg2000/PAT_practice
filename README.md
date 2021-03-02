@@ -493,3 +493,6 @@ substr(loc,len)的用法是在loc位置向后取len个长度作为子串
 只得了16分
 
 [1152_Google_Recruitment.cpp](./1152_Google_Recruitment.cpp)
+
+柳婼大佬的代码 20分 对比发现在for循环输出那里少了个等于。。
+[1152_Google_Recruitment.cpp](./1152_Google_Recruitment.cpp)
