@@ -1,5 +1,6 @@
 # PAT_practice
 To make progress in programing and to be a graduate student of Zhejiang University.
+
 ## 1007 Maximum subsequence sum.
 1007 Maximum Subsequence Sum (25分) Given a sequence of K integers { N1 , N​2 ,...,
   NK }. A continuous subsequence is defined to be { Ni , Ni+1,..., Nj }
@@ -12,12 +13,14 @@ being 20.
 Now you are supposed to find the largest sum, together with the first an
 d the last numbers of the maximum subsequence.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case. Each case occupies two lines. Th
 e first line contains a positive integer K (≤10000). The second line
 K numbers, separated by a space.
 
-Output Specification:
+**Output Specification:**
+
 For each test case, output in one line the largest sum, together with th
 e first and the last numbers of the maximum subsequence. The numbers mus
 t be separated by one space, but there must be no extra space at the end
@@ -57,10 +60,12 @@ dp[i] = max(dp[i-1]+arr[i],dp[i-1])
 
 Given a string, you are supposed to output the length of the longest symmetric sub-string. For example, given Is PAT&TAP symmetric?, the longest symmetric sub-string is s PAT&TAP s, hence you must output 11.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case which gives a non-empty string of length no more than 1000.
 
-Output Specification:
+**Output Specification:**
+
 For each test case, simply print the maximum length in a line.
 
 **Sample Input:**
@@ -96,10 +101,12 @@ StudentID  C  M  E  A
 310104     91 91 91 91
 Then the best ranks for all the students are No.1 since the 1st one has done the best in C Programming Language, while the 2nd one in Mathematics, the 3rd one in English, and the last one in average.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case. Each case starts with a line containing 2 numbers N and M (≤2000), which are the total number of students, and the number of students who would check their ranks, respectively. Then N lines follow, each contains a student ID which is a string of 6 digits, followed by the three integer grades (in the range of [0, 100]) of that student in the order of C, M and E. Then there are M lines, each containing a student ID.
 
-Output Specification:
+**Output Specification:**
+
 For each of the M students, print in one line the best rank for him/her, and the symbol of the corresponding rank, separated by a space.
 
 The priorities of the ranking methods are ordered as A > C > M > E. Hence if there are two or more ways for a student to obtain the same best rank, output the one with the highest priority.
@@ -163,12 +170,14 @@ For example, given N=5 and the numbers 1, 3, 2, 4, and 5. We have:
 and for the similar reason, 4 and 5 could also be the pivot.
 Hence in total there are 3 pivot candidates.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case. For each case, the first line gives a positive integer N (≤105
 ​​ ). Then the next line contains N distinct positive integers no larger than 109
 ​​ . The numbers in a line are separated by spaces.
 
-Output Specification:
+**Output Specification:**
+
 For each test case, output in the first line the number of pivot candidates. Then in the next line print these candidates in increasing order. There must be exactly 1 space between two adjacent numbers, and no extra space at the end of each line.
 
 **Sample Input:**
@@ -202,10 +211,12 @@ The following is from Max Howell @twitter:
 Google: 90% of our engineers use the software you wrote (Homebrew), but you can't invert a binary tree on a whiteboard so fuck off.
 Now it's your turn to prove that YOU CAN invert a binary tree!
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case. For each case, the first line gives a positive integer N (≤10) which is the total number of nodes in the tree -- and hence the nodes are numbered from 0 to N−1. Then N lines follow, each corresponds to a node from 0 to N−1, and gives the indices of the left and right children of the node. If the child does not exist, a - will be put at the position. Any pair of children are separated by a space.
 
-Output Specification:
+**Output Specification:**
+
 For each test case, print in the first line the level-order, and then in the second line the in-order traversal sequences of the inverted tree. There must be exactly one space between any adjacent numbers, and no extra space at the end of the line.
 
 **Sample Input:**
@@ -246,10 +257,12 @@ For each test case, print in the first line the level-order, and then in the sec
 ## 1103 Integer Factorization (30分)
 The K−P factorization of a positive integer N is to write N as the sum of the P-th power of K positive integers. You are supposed to write a program to find the K−P factorization of N for any positive integers N, K and P.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case which gives in a line the three positive integers N (≤400), K (≤N) and P (1<P≤7). The numbers in a line are separated by a space.
 
-Output Specification:
+**Output Specification:**
+
 For each case, if the solution exists, output in the format:
 
 N = n[1]^P + ... n[K]^P
@@ -291,12 +304,14 @@ Given a sequence of positive numbers, a segment is defined to be a consecutive s
 
 Now given a sequence, you are supposed to find the sum of all the numbers in all the segments. For the previous example, the sum of all the 10 segments is 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0.
 
-Input Specification:
+**Input Specification:**
+
 Each input file contains one test case. For each case, the first line gives a positive integer N, the size of the sequence which is no more than 10
 ​5
 ​​ . The next line contains N positive numbers in the sequence, each no more than 1.0, separated by a space.
 
-Output Specification:
+**Output Specification:**
+
 For each test case, print in one line the sum of all the numbers in all the segments, accurate up to 2 decimal places.
 
 **Sample Input:**
@@ -320,13 +335,13 @@ For each test case, print in one line the sum of all the numbers in all the segm
 
 This time your job is to fill a sequence of N positive integers into a spiral matrix in non-increasing order. A spiral matrix is filled in from the first element at the upper-left corner, then move in a clockwise spiral. The matrix has m rows and n columns, where m and n satisfy the following: m×n must be equal to N; m≥n; and m−n is the minimum of all the possible values.
 
-Input Specification:
+**Input Specification:**
 
 Each input file contains one test case. For each case, the first line gives a positive integer N. Then the next line contains N positive integers to be filled into the spiral matrix. All the numbers are no more than 10
 ​4
 ​​ . The numbers in a line are separated by spaces.
 
-Output Specification:
+**Output Specification:**
 
 For each test case, output the resulting matrix in m lines, each contains n numbers. There must be exactly 1 space between two adjacent numbers, and no extra space at the end of each line.
 
@@ -353,3 +368,128 @@ For each test case, output the resulting matrix in m lines, each contains n numb
 修改了一下行列判断的条件，成功ac
 
 [1105_Spiral_Matrix.cpp](./1105_Spiral_Matrix.cpp)
+
+## 1155 Heap Paths (30分)
+In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C, then the key (the value) of P is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the key of C. A common implementation of a heap is the binary heap, in which the tree is a complete binary tree. (Quoted from Wikipedia at https://en.wikipedia.org/wiki/Heap_(data_structure))
+
+One thing for sure is that all the keys along any path from the root to a leaf in a max/min heap must be in non-increasing/non-decreasing order.
+
+Your job is to check every path in a given complete binary tree, in order to tell if it is a heap or not.
+
+**Input Specification:**
+
+Each input file contains one test case. For each case, the first line gives a positive integer N (1<N≤1,000), the number of keys in the tree. Then the next line contains N distinct integer keys (all in the range of int), which gives the level order traversal sequence of a complete binary tree.
+
+**Output Specification:**
+
+For each given tree, first print all the paths from the root to the leaves. Each path occupies a line, with all the numbers separated by a space, and no extra space at the beginning or the end of the line. The paths must be printed in the following order: for each node in the tree, all the paths in its right subtree must be printed before those in its left subtree.
+
+Finally print in a line Max Heap if it is a max heap, or Min Heap for a min heap, or Not Heap if it is not a heap at all.
+
+**Sample Input 1:**
+
+8
+
+98 72 86 60 65 12 23 50
+
+**Sample Output 1:**
+
+98 86 23
+
+98 86 12
+
+98 72 65
+
+98 72 60 50
+
+Max Heap
+
+**Sample Input 2:**
+
+8
+
+8 38 25 58 52 82 70 60
+
+**Sample Output 2:**
+
+8 25 70
+
+8 25 82
+
+8 38 52
+
+8 38 58 60
+
+Min Heap
+
+Sample Input 3:
+8
+
+
+10 28 15 12 34 9 8 56
+
+**Sample Output 3:**
+
+10 15 8
+
+10 15 9
+
+10 28 34
+
+10 28 12 56
+
+Not Heap
+
+通过观察样例，可以看出从右向左层次遍历树
+
+随后判断是否是最大堆最小堆或者不是堆
+
+[1155_Heap_paths.cpp](./1155_Heap_paths.cpp)
+
+## 1152 Google Recruitment
+
+In July 2004, Google posted on a giant billboard along Highway 101 in Silicon Valley (shown in the picture below) for recruitment. The content is super-simple, a URL consisting of the first 10-digit prime found in consecutive digits of the natural constant e. The person who could find this prime number could go to the next step in Google's hiring process by visiting this website.
+
+The natural constant e is a well known transcendental number（超越数）. The first several digits are: e = 2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921... where the 10 digits in bold are the answer to Google's question.
+
+Now you are asked to solve a more general problem: find the first K-digit prime in consecutive digits of any given L-digit number.
+
+**Input Specification:**
+
+Each input file contains one test case. Each case first gives in a line two positive integers: L (≤ 1,000) and K (< 10), which are the numbers of digits of the given number and the prime to be found, respectively. Then the L-digit number N is given in the next line.
+
+**Output Specification:**
+
+For each test case, print in a line the first K-digit prime in consecutive digits of N. If such a number does not exist, output 404 instead. Note: the leading zeroes must also be counted as part of the K digits. For example, to find the 4-digit prime in 200236, 0023 is a solution. However the first digit 2 must not be treated as a solution 0002 since the leading zeroes are not in the original number.
+
+**Sample Input 1:**
+
+20 5
+
+23654987725541023819
+
+**Sample Output 1:**
+
+49877
+
+**Sample Input 2:**
+
+10 3
+
+2468024680
+
+**Sample Output 2:**
+
+404
+
+题目要求：找到第一个K个数为素数的字串并输出
+
+首先写一个isPrime判断素数
+
+再简单输出即可
+
+substr(loc,len)的用法是在loc位置向后取len个长度作为子串
+
+只得了16分
+
+[1152_Google_Recruitment.cpp](./1152_Google_Recruitment.cpp)
