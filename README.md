@@ -496,3 +496,82 @@ substr(loc,len)的用法是在loc位置向后取len个长度作为子串
 
 柳婼大佬的代码 20分 对比发现在for循环输出那里少了个等于。。
 [1152_Google_Recruitment.cpp](./1152_Google_Recruitment.cpp)
+
+
+## 1154 Vertex Coloring
+
+A proper vertex coloring is a labeling of the graph's vertices with colors such that no two vertices sharing the same edge have the same color. A coloring using at most k colors is called a (proper) k-coloring.
+
+Now you are supposed to tell if a given coloring is a proper k-coloring.
+
+**Input Specification:**
+
+Each input file contains one test case. For each case, the first line gives two positive integers N and M (both no more than 10
+​4
+​​ ), being the total numbers of vertices and edges, respectively. Then M lines follow, each describes an edge by giving the indices (from 0 to N−1) of the two ends of the edge.
+
+After the graph, a positive integer K (≤ 100) is given, which is the number of colorings you are supposed to check. Then K lines follow, each contains N colors which are represented by non-negative integers in the range of int. The i-th color is the color of the i-th vertex.
+
+**Output Specification:**
+
+For each coloring, print in a line k-coloring if it is a proper k-coloring for some positive k, or No if not.
+
+**Sample Input:**
+
+10 11
+
+8 7
+
+6 8
+
+4 5
+
+8 4
+
+8 1
+
+1 2
+
+
+1 4
+
+9 8
+
+9 1
+
+1 0
+
+2 4
+
+4
+
+0 1 0 1 4 1 0 1 3 0
+
+0 1 0 1 4 1 0 1 0 0
+
+8 1 0 1 4 1 0 5 3 0
+
+1 2 3 4 5 6 7 8 8 9
+
+**Sample Output:**
+
+4-coloring
+
+No
+
+6-coloring
+
+No
+
+**题目大意：**
+
+给出N个顶点和M条边，任意相连顶点的颜色不可相同，如相同则输出No，不同则输出用了几种颜色给顶点染色
+
+**题解**
+我们首先用两个数组存储每条边的两个顶点。
+
+针对每个染色方案，我们判断每条边的两个顶点的颜色是否相同，如果一旦有相同颜色的顶点，则跳出输出No。
+
+用unordered_set存储顶点的颜色，可有效去重
+
+[1154_Vertex_coloring.cpp](./1154_Vertex_coloring.cpp)
