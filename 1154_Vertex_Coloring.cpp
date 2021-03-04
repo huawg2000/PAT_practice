@@ -13,14 +13,14 @@ int main(int argc, char const *argv[]) {
   cin>>k;
   while(k--) {
     unordered_set<int> color;
-    int color_on_edge[M];
+    int color_on_vertex[M];
     for(int i = 0;i < M;i++) {
-      cin>>color_on_edge[i];
-      color.insert(color_on_edge[i]);
+      cin>>color_on_vertex[i];
+      color.insert(color_on_vertex[i]);
     }
     bool same_color = false;
     for(int i = 0;i < N;i++) {
-      if(color_on_edge[a[i]] == color_on_edge[b[i]]) {
+      if(color_on_vertex[a[i]] == color_on_vertex[b[i]]) {
         same_color = true;
       }
       if(same_color == true) {
