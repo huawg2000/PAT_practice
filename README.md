@@ -574,8 +574,4 @@ No
 
 用unordered_set存储顶点的颜色，可有效去重
 
-[1154_Vertex_coloring.cpp](./1154_Vertex_coloring.cpp)
-
-修改了一些变量名称
-
-[1154_Vertex_coloring.cpp](./1154_Vertex_coloring.cpp)
+[1154_Vertex_Coloring.cpp](./1154_Vertex_coloring.cpp)
